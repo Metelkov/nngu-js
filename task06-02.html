@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./index.html"><button>В начало</button></a>
+    <P>открой консоль и обнови страничку</P>
+    <br>
+    <p> 06 - 02 Дан массив с числами. Найдите сумму тех элементов этого массива, которые больше нуля и меньше десяти.</p>
+
+    <script>
+
+function createArr() {
+let arr = [];
+for(let i = 0 ; i < 7 ; i++){
+  arr.push(Math.floor(-5 + Math.random() * (15)));
+}
+
+console.log("оригинальный масси = " + arr);
+
+let summ = 0;
+  arr.forEach(function(entry) {
+      if(entry > 0 && entry < 10) {
+        summ += entry;
+      }
+  });
+  return summ;
+}
+
+let a = createArr()
+console.log("сумма элементов массива, которые больше нуля и меньше десяти = " + a);
+
+
+
+    </script>
+    
+</body>
+</html>

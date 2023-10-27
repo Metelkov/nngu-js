@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./index.html"><button>В начало</button></a>
+    <P>открой консоль и обнови страничку</P>
+    <br>
+    <p> 06 - 05 Написать функцию, которая принимает массив чисел и возвращает среднее арифметическое, (округлить результат до десятых).</p>
+
+    <script>
+
+let arr = [];
+let iteration = 7;
+for(let i = 0 ; i < iteration ; i++){
+arr.push(Math.floor(0 + Math.random() * (14)));
+}
+console.log("оригинальный масси = " + arr);
+
+
+function sredArif(arr) {
+
+let sum = arr.reduce(function(a, b){
+  return (a + b);
+});
+
+return (sum  / iteration).toFixed(1);
+
+};
+
+let a = sredArif(arr);
+console.log("среднее арифметическое = " + a);
+
+    </script>
+    
+</body>
+</html>

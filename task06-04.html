@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./index.html"><button>В начало</button></a>
+    <P>открой консоль и обнови страничку</P>
+    <br>
+    <p> 06 - 04 Написать функцию, которая принимает массив любых целых чисел, и возвращает новый массив из элементов переданного массива, кратных пяти. ([1,2,5,12,15,21] вернет [5,15])</p>
+
+    <script>
+
+console.log("Метод map возвращает массив того же размера, как и перебираемый, а если на какой-то итерации отсутствовал return, то вставит undefined - поэтому не map");
+
+function kratnFive() {
+  let arr = [];
+    for(let i = 0 ; i < 7 ; i++){
+      arr.push(Math.floor(0 + Math.random() * (14)));
+    }
+  console.log("оригинальный масси = " + arr);
+
+let result = (arr.filter((element_In_Arr) => element_In_Arr %5 == 0  )).filter((element_In_Arr) => element_In_Arr > 0);
+return result;
+
+};
+
+let a = kratnFive()
+console.log("элементы в массиве ратные пяти = " + a);
+console.log("Array.isArray(a) = " + Array.isArray(a));
+
+console.log("это я закрутил, сам удивлен, буду считать верхом элегантности \)\)\)  \(осталось запомнить\)");
+
+    </script>
+    
+</body>
+</html>

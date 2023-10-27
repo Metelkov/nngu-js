@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./index.html"><button>В начало</button></a>
+    <P>открой консоль и обнови страничку</P>
+    <br>
+    <p> 06 - 06 - 1  Написать функцию, которая принимает массив чисел и переносит первый элемент массива в конец. вариант 1, (см комментарии в коде)</p>
+
+    <script>
+
+function perenos() {
+  let arr = [];
+  let iteration = 7;
+    for(let i = 0 ; i < iteration ; i++){
+      arr.push(Math.floor(0 + Math.random() * (14)));
+    }
+  console.log("оригинальный масси = " + arr);
+
+
+let fromIndex = 0; // индекс элемента, который надо перенести в конец
+let item = arr.splice(fromIndex, 1)[0]; // получаем элемент, который надо перенести и удаляем его из массива - элемент, берем 1 шт, удаляем 0 
+arr.splice(arr.length, 0, item); // добавляем элемент в конец - вычисляем последний элем, удяляем 0 элемтов после, вставляем item
+
+return arr;
+};
+
+let a = perenos()
+console.log(" перенесенный = " + a);
+
+
+    </script>
+    
+</body>
+</html>

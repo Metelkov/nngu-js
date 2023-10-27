@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <a href="./index.html"><button>В начало</button></a>
+    <P>открой консоль и обнови страничку</P>
+    <br>
+    <p> 06 - 08 Запросите у пользователя число и сформируйте на его основе другое число, каждая цифра которого больше на единицу. Если попалась цифра 9 она также заменяется на 10.</p>
+
+    <script>
+
+<p>странная реализация, как понял, так и сделал. если ввести 9 - на выходе 10. если ввести 99 - на выходе 10, 10. если ввести 10, на выходе 2, 1. 
+  мы же не введем в "сплошной строке" две десятки, будет 1010 </p>
+
+function digit() {
+let questDigit = prompt("введите число");
+  if (isNaN(questDigit)) {
+    let exit1 = "Вы ввели не число, перезапустите программу";
+    return exit1;
+  }
+    else {
+        let getManyDigits = questDigit.split('');
+
+        let  increment = getManyDigits.map(function (getManyDigits, index, arr) {
+             return +getManyDigits +1
+        })
+
+        return increment;
+    }
+
+};
+
+let a = digit()
+console.log(" = " + a);
+
+
+
+    </script>
+    
+</body>
+</html>
