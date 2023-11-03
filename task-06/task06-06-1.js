@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="./index.html"><button>В начало</button></a>
-    <P>открой консоль и обнови страничку</P>
-    <br>
-    <p> 06 - 06 - 1  Написать функцию, которая принимает массив чисел и переносит первый элемент массива в конец. вариант 1, (см комментарии в коде)</p>
 
-    <script>
 
 function perenos() {
   let arr = [];
@@ -31,9 +18,3 @@ return arr;
 
 let a = perenos()
 console.log(" перенесенный = " + a);
-
-
-    </script>
-    
-</body>
-</html>

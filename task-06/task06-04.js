@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="./index.html"><button>В начало</button></a>
-    <P>открой консоль и обнови страничку</P>
-    <br>
-    <p> 06 - 04 Написать функцию, которая принимает массив любых целых чисел, и возвращает новый массив из элементов переданного массива, кратных пяти. ([1,2,5,12,15,21] вернет [5,15])</p>
-
-    <script>
 
 console.log("Метод map возвращает массив того же размера, как и перебираемый, а если на какой-то итерации отсутствовал return, то вставит undefined - поэтому не map");
 
@@ -33,7 +19,3 @@ console.log("Array.isArray(a) = " + Array.isArray(a));
 
 console.log("это я закрутил, сам удивлен, буду считать верхом элегантности \)\)\)  \(осталось запомнить\)");
 
-    </script>
-    
-</body>
-</html>
