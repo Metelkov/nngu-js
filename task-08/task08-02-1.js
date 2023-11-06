@@ -16,4 +16,3 @@ return rezult;
 let date = new Date();
 let a = retNewYear(date);
 console.log("Дней до нового года осталось = " + a);
-

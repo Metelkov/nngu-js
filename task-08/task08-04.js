@@ -6,29 +6,26 @@
 // 	s: 59,
 // }
 
-// *** - need to work
 
 
 function returnSomeTime(arg) {
 if(isNaN(arg)) {
- let errStr = "секунды введены не как число или введено не число";
+  let errStr = "секунды введены не как число или введено не число";
 return errStr;
 }
- else {
- let someTime = {};
-//    someTime['d'] = Number(arg)/86400;
-//    someTime['h'] = Number(arg)/3600;
-//    someTime['m'] = Number(arg)/60;
- someTime['s'] = Number(arg);
-return someTime;
-}
+  else {
+    let someTime = {};
+    someTime['Дней'] = (Number(arg)/86400).toFixed(0);    //везде можно и без toFixed(0), тоже норм работает :)
+    someTime['Часов'] = (Number(arg)/3600).toFixed(0);
+    someTime['Минут'] = (Number(arg)/60).toFixed(0);
+    someTime['Секунд'] = (Number(arg)).toFixed(0);
+  return someTime;
+  }
 
 
 };
 
 let getSecond = prompt("введите кол-во секунд");
-let a = returnSomeTime(date);
+console.log(`в ${getSecond} секундах`);
+let a = returnSomeTime(getSecond);
 console.log(a);
-
-console.log("getSecond = " + getSecond);
-
