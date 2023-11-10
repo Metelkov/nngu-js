@@ -9,9 +9,6 @@
 
 
 
-<script>
-
-
 function getGenerateLink(category){
   return function(tovarCode) {
     return `https://myshop.ru/${category}/${tovarCode}`;
@@ -28,5 +25,3 @@ console.log(createNotebook("4004"));
 let createMonitor = getGenerateLink("monitor");
 console.log(createMonitor("345"));
 
-
-</script>
