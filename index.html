@@ -9,53 +9,47 @@
 <body>
 
   <script>
-// function getCreate(x){
-//   return function(y) {
-//     return `https://myshop.ru/${x}/${y}`;
-//   }
+
+
+// let str = "awer  wrew a awg whterw ht 124";
+
+// function wordText (param) {
+// arr = str.split(" "); 
+// let vivod = arr.filter(parametr => parametr.startsWith(param)) ;
+//     return vivod.join(" ");
 // }
 
-// let createPClinc = getCreate("pc");
-// console.log(createPClinc("1001"))
-
-// let createNotebook = getCreate("notebook");
-// console.log(createNotebook("455"));
-
-
-// let createMonitor = getCreate("monitor");
-// console.log(createMonitor("100"));
+// let a="a";
+// //fun = wordText(a);
+// //console.log(fun);
+// console.log(wordText(a));
+// console.log(Array.isArray(wordText))
 
 
-let orders=[
-    {
-        fio:"Ivan",
-        tovar:"phone",
-        price:10000,
-        quantity:2
-    },
-    {
-        fio:"Peter",
-        tovar:"usb",
-        price:2300,
-        quantity:5
-    },
-    {
-        fio:"Mary",
-        tovar:"connector",
-        price:100,
-        quantity:100
-    },
-   ]
+//подсчитать кол-во вызовов окон prompt и alert
 
+function f() {
+    let count = 0;
+    return function() {
+        return count++;
+    };
+}
 
+countAlert = f();
+countConfirm = f();
+while (true) {
 
-   
-   orders.slice(fio).map((new) => 
-   fio)
-   return sessionStorage
-  
-
-
+    let quest = prompt("2 - confirm, 1 - alert, >2 - exit");
+    if (quest == 1) {
+        alert("hello");
+        console.log(`Alert ${countAlert()}`);
+    }
+    else if(quest==2) {
+        confirm("you are ok?");
+        console.log(`Confirm ${countConfirm()}`);
+    }
+    else break;
+}
 
 
 
