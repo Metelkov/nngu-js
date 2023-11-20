@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+<div>
+
+ <a style="display: flex; flex-direction: columns; margin: 2%;" href="./1.html" id="cancLink">cancelled link</a>
+
+ <form style="border: 1px solid; margin: 2%; padding: 1%;" id="forma">
+    <div style="margin: 1%;">
+        <label>Начисено<input type="text" id="nachis"></label>
+        
+     </div>
+
+     <div style="margin: 1%;">
+        <label>Ужержено <input type="text" id="uderzh"></label>
+       
+     </div>
+
+     <div style="margin: 1%;">
+        <label>Итого<input type="text" id="itogo"></label>
+        
+     </div>
+     <input type="submit" value="Calculate" id="calcul"/>
+ </form>
+
+  
+<button style="display: flex; flex-direction: columns; margin: 2%;" id="backlink" onclick="history.back()"> nazad</button>
+
+
+</div>
+    <script>
+
+document.getElementById("cancLink").onclick=function() {
+   
+}
+
+document.getElementById("forma").onsubmit=function() {
+    return false; event.preventDefault();
+    //event.preventDefault();       //можно и так написать, но в интернетах пишут, что возврат false лучше
+}
+
+calcul.onclick = function() {
+    let nachisleno = document.getElementById("nachis").value;
+    let uderzheno = document.getElementById("uderzh").value;
+    document.getElementById("itogo").value=Number(nachisleno) - Number(uderzheno);
+    //event.preventDefault();    // не отменит отправку на сервер (перезагрузку) формы
+};
+
+// backlink.onclick = function() {  //функция не срабоатывает и если она не закомментирована - кнопка не срабатывает
+//     event.history.back();
+//     alert("aaaaaa");
+// };
+
+
+
+    </script>
+    
+</body>
+</html>

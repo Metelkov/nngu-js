@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+<div>
+
+  <button style="display: flex; flex-direction: columns; margin: 2%;" onclick="buttonFunction()">Information</button>
+
+  <textarea style="display: flex; flex-direction: columns; margin: 2%; width: 300px; height: 200px;" id="txtArr"></textarea>
+
+  <a style="display: flex; flex-direction: columns; margin: 2%;" href="./2.html" id="linkk">next page</a>
+
+
+</body>
+
+    <script>
+
+
+function buttonFunction() {
+    document.getElementById("txtArr").value=window.navigator.userAgent;
+}
+
+    </script>
+    
+</body>
+</html>

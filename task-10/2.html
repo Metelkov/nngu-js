@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+<div>
+
+  <button style="display: flex; flex-direction: columns; margin: 2%;" onclick="buttonFunction()">Information about screen</button>
+
+  <div style="margin: 1%;">
+  <label>разрешение по ширине</label>
+  <input type="text" readonly id="wid">
+</div>
+<div style="margin: 1%;">
+  <label>разрешение по высоте</label>
+  <input type="text" readonly id="hei">
+</div>
+<div style="margin: 1%;">
+  <label>ширина рабочей области</label>
+  <input type="text" readonly id="workWid">
+</div>
+<div style="margin: 1%;">
+  <label>высота рабочей области</label>
+  <input type="text" readonly id="workHei">
+</div>
+  <a style="display: flex; flex-direction: columns; margin: 2%;" href="./3.html">next page</a>
+  <button style="display: flex; flex-direction: columns; margin: 2%;" id="backlink" onclick="history.back()"> nazad</button>
+
+</div>
+    <script>
+
+function buttonFunction() {
+    document.getElementById("wid").value = window.screen.width;
+    document.getElementById("hei").value = window.screen.height;
+    document.getElementById("workWid").value = window.screen.availWidth;
+    document.getElementById("workHei").value = window.screen.availHeight;
+}
+
+
+    </script>
+    
+</body>
+</html>

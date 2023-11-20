@@ -8,48 +8,19 @@
 </head>
 <body>
 
-  <script>
 
 
-// let str = "awer  wrew a awg whterw ht 124";
-
-// function wordText (param) {
-// arr = str.split(" "); 
-// let vivod = arr.filter(parametr => parametr.startsWith(param)) ;
-//     return vivod.join(" ");
-// }
-
-// let a="a";
-// //fun = wordText(a);
-// //console.log(fun);
-// console.log(wordText(a));
-// console.log(Array.isArray(wordText))
 
 
-//подсчитать кол-во вызовов окон prompt и alert
+<textarea id="txt"></textarea>
 
-function f() {
-    let count = 0;
-    return function() {
-        return count++;
-    };
-}
-
-countAlert = f();
-countConfirm = f();
-while (true) {
-
-    let quest = prompt("2 - confirm, 1 - alert, >2 - exit");
-    if (quest == 1) {
-        alert("hello");
-        console.log(`Alert ${countAlert()}`);
-    }
-    else if(quest==2) {
-        confirm("you are ok?");
-        console.log(`Confirm ${countConfirm()}`);
-    }
-    else break;
-}
+<script>
+str=`высота экрана = ${screen.height}, \n`;
+str+=`ширина экрана = ${screen.width}, \n`;
+str+=`высота текущ экрана = ${screen.availHeight}, \n`;
+str+=`ши рина текущ экрана = ${screen.availHeight}, \n`
+txt.value=str;
+</script>
 
 
 
@@ -59,26 +30,5 @@ while (true) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </script>
-  
 </body>
 </html>
