@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./mycss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="main">
+    <div class="wrapper-goods">
+        <div class="goods">
+            <div class="somegood">
+                <div class="somegood-pic">
+                    <img src="./pic/1-br.jpg" alt="pic">
+                </div>
+                <div class="somegood-name">
+                    <p>Финтес-браслет DEXP SB60</p>
+                </div>
+                <div class="somegood-properties">
+
+                </div>
+                <button class="btn btn-primary">Купить</button>
+            </div>
+            <div class="somegood">
+                <div class="somegood-pic">
+                    <img src="./pic/2-br.jpg" alt="pic">
+                </div>
+                <div class="somegood-name">
+                    <p>Смарт-часы RunGo W2</p>
+                </div>
+                <div class="somegood-properties">
+
+                </div>
+                <button class="btn btn-primary">Купить</button>
+                
+            </div>
+            <div class="somegood">
+                <div class="somegood-pic">
+                    <img src="./pic/3-br.jpg" alt="pic">
+                </div>
+                <div class="somegood-name">
+                    <p>Смарт-часы Wible Prime</p>
+                </div>
+                <div class="somegood-properties">
+
+                </div>
+                <button class="btn btn-primary">Купить</button>
+                
+            </div>
+    
+        </div>
+        <div class="timer text-white bg-dark">
+    <h1>
+        До конца распродажи осталось:
+    </h1>
+    <h2>
+        <span class="hours"></span>
+        <span class="d1">:</span>
+        <span class="minutess"></span>
+        <span class="d2">:</span>
+        <span class="seconds"></span>
+        
+    </h2>
+    <h2>
+        Конец акции – 1 января 2024 года.
+    </h2>
+        </div>
+    </div>
+    <div class="calc">
+        <table border=1>
+            <tr>
+             <td>Услуга</td>
+             <td>Цена за ед.</td>
+             <td>Количество</td>
+             <td>Итого за услугу</td>
+            </tr>
+            <tr>
+             <td>Черно-белая печать (лист)</td>
+             <td id="bwPrint"></td>
+             <td><input type="number" min=0 id="bwPrintQ"></td>
+             <td id="sum0"></td>
+            </tr>
+            <tr>
+             <td>Черно-белая копия (лист)</td>
+             <td id="bwCopy"></td>
+             <td><input type="number" min=0 id="bwPrintQ"></td>
+             <td id="sum1"></td>
+            </tr>
+            <tr>
+             <td>Цветная печать (лист)</td>
+             <td id="colorPrint"></td>
+             <td><input type="number" min=0 id="bwPrintQ"></td>
+             <td id="sum2"></td>
+            </tr>
+            <tr>
+             <td>Цветная копия (лист)</td>
+             <td id="colorCopy"></td>
+             <td><input type="number" min=0 id="bwPrintQ"></td>
+             <td id="sum3"></td>
+            </tr>
+            <tr>
+             <td>Фото 30х40</td>
+             <td id="photo3040"></td>
+             <td><input type="number" min=0 id="bwPrintQ"></td>
+             <td id="sum4"></td>
+            </tr>
+            <tr>
+             <td>Фото 50х60</td>
+             <td id="photo5060"></td>
+             <td><input type="number" min=0 id="bwPrintQ"></td>
+             <td id="sum5"></td>
+            </tr>
+            <tr>
+             <td colspan="3">ИТОГО</td>
+             <td id="itogo"></td>
+            </tr>
+         </table>
+     
+
+    </div>
+</div>
+
+<script>
+    //да, его следует подключить через файл, но тут нагляднее - меньше переключений между вклжаками
+    function setTimer() {
+      let data = new Date();
+      let hours=document.querySelector(".hours");
+      let minutes=document.querySelector(".minutes");
+      let seconds=document.querySelector(".seconds");
+      hours.innerHTML=data.getHours();
+      minutes.innerHTML=data.getMinutes();
+      seconds.innerHTML=data.getSeconds();
+    }
+    setInterval(() => {
+        "setTimer()"
+    }, 1000);
+
+    import {goodsArr} from './goods.js';
+    console.log(goodsArr);
+</script>
+
+<script src="./bootstrap.bundle.min.js"></script>
+<script src="./googs.js"></script>
+<script src="./typograph.js"></script>
+</body>
+</html>
