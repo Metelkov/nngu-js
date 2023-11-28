@@ -127,10 +127,14 @@
     </div>
 </div>
 
+<script type="module" src="./googs.js"></script>
+<script type="module" src="./typograph.js"></script>
+
 <script>
     //да, его следует подключить через файл, но тут нагляднее - меньше переключений между вклжаками
     function setTimer() {
-      let data = new Date();
+      //let data = new Date();
+      let data = "dddddddd"
       let hours=document.querySelector(".hours");
       let minutes=document.querySelector(".minutes");
       let seconds=document.querySelector(".seconds");
@@ -142,12 +146,15 @@
         "setTimer()"
     }, 1000);
 
-    import {goodsArr} from './goods.js';
-    console.log(goodsArr);
+    // import {goods} from './goods.js';
+    // console.log(goodsArr);
+    
+    // import {typograph} from './typograph.js';
+
+    
 </script>
 
 <script src="./bootstrap.bundle.min.js"></script>
-<script src="./googs.js"></script>
-<script src="./typograph.js"></script>
+
 </body>
 </html>
