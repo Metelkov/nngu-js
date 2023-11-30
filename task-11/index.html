@@ -127,7 +127,16 @@
     </div>
 </div>
 
-<script type="module" src="./googs.js"></script>
+<script type="module" src="./goods.js">
+   import {goods} from './goods.js';
+    let getGoodsName = "goods.name";
+    getSelector = document.querySelector(".somegood-properties");
+    getSelector.innerHTML=getGoodsName;
+
+</script>
+
+
+
 <script type="module" src="./typograph.js"></script>
 
 <script>
@@ -166,10 +175,20 @@
     }
 
     setInterval("setTimer()", 1000);
+    
+       
+    // import {goods} from './goods.js';
+    // let getGoodsName = "goods.name";
+    // getSelector = document.querySelector(".somegood-properties");
+    // getSelector.innerHTML=getGoodsName;
+    
+
 
 function insertTovar() {
-    let tovar = document.querySelector(".somegood-properties");
-    return goods.forEach((element, n) => console.log(element, n));
+
+    //let tovar = document.querySelector(".somegood-properties");
+    //return goods.forEach((element, n) => console.log(element, n));
+    //return goods.forEach((element, n) => name11.innerHTML=name);
 }
 
 
