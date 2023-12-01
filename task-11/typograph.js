@@ -5,5 +5,5 @@ export let typograph = {
         colorSheetType:200,
         colorSheetCopy:190,
         photo20x40:150,
-        photo50x60:240,
+        photo50x60:240
     };

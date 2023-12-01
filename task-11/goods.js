@@ -1,8 +1,8 @@
 'use strict'
 export let goods = [
     {
-        name:"11",
-        imgSrc:"1.jpg",
+        name:"Финтес-браслет DEXP SB60",
+        imgSrc:"./pic/1-br.jpg",
         corpus:"black",
         remen:"black",
         displaySize:"0.96\"",
@@ -14,8 +14,8 @@ export let goods = [
         }
     },
     {
-        name:"22",
-        imgSrc:"2.jpg",
+        name:"Смарт-часы RunGo W2",
+        imgSrc:"./pic/2-br.jpg",
         corpus:"pinc",
         remen:"pinc",
         displaySize:"0.6\"",
@@ -27,8 +27,8 @@ export let goods = [
         }
     },
     {
-        name:"33",
-        imgSrc:"3.jpg",
+        name:"Смарт-часы Wible Prime",
+        imgSrc:"./pic/3-br.jpg",
         corpus:"black",
         remen:"black",
         displaySize:"0.6\"",
@@ -38,5 +38,5 @@ export let goods = [
             os1: "Android 6,2",
             os2: "iOS 10",
         }
-    },
+    }
 ];

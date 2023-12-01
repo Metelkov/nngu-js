@@ -18,60 +18,54 @@
         <div class="goods">
             <div class="somegood">
                 <div class="somegood-pic">
-                    <img src="./pic/1-br.jpg" alt="pic">
                 </div>
                 <div class="somegood-name">
-                    <p>Финтес-браслет DEXP SB60</p>
                 </div>
                 <div class="somegood-properties">
-
                 </div>
                 <button class="btn btn-primary">Купить</button>
             </div>
             <div class="somegood">
                 <div class="somegood-pic">
-                    <img src="./pic/2-br.jpg" alt="pic">
                 </div>
                 <div class="somegood-name">
-                    <p>Смарт-часы RunGo W2</p>
                 </div>
                 <div class="somegood-properties">
-
                 </div>
                 <button class="btn btn-primary">Купить</button>
-                
             </div>
             <div class="somegood">
                 <div class="somegood-pic">
-                    <img src="./pic/3-br.jpg" alt="pic">
+                    <!-- <img src="./pic/3-br.jpg" alt="pic"> -->
                 </div>
                 <div class="somegood-name">
-                    <p>Смарт-часы Wible Prime</p>
+                    <!-- <p>Смарт-часы Wible Prime</p> -->
                 </div>
                 <div class="somegood-properties">
-
                 </div>
                 <button class="btn btn-primary">Купить</button>
-                
             </div>
-    
         </div>
-        <div class="timer text-white bg-dark">
-    <h1>
-        До конца распродажи осталось:
-    </h1>
-    <h2>
-        <span class="hours"></span>
-        <span class="d1">:</span>
-        <span class="minutes"></span>
-        <span class="d2">:</span>
-        <span class="seconds"></span>
-        
-    </h2>
-    <h2>
-        Конец акции – 1 января 2024 года.
-    </h2>
-        </div>
+      <div class="timer text-white bg-dark">
+        <h1>
+            До конца распродажи осталось:
+        </h1>
+        <h2>
+            <span class="days h1 text-danger"></span>
+            <span class="d1 h4">Дней</span>
+            <span class="hours h1 text-danger"></span>
+            <span class="d1 h4">Часов</span>
+            <span class="minutes h1 text-danger"></span>
+            <span class="d2 h4">Минут</span>
+            <span class="seconds h1 text-danger"></span>
+            <span class="d2 h4">Секунд</span>
+            
+        </h2>
+        <!-- <span class="timer"></span> -->
+        <h2>
+            Конец акции – 1 января 2024 года.
+        </h2>
+      </div>
     </div>
     <div class="calc">
         <table border=1>
@@ -127,74 +121,12 @@
     </div>
 </div>
 
-<script type="module" src="./goods.js">
-   import {goods} from './goods.js';
-    let getGoodsName = "goods.name";
-    getSelector = document.querySelector(".somegood-properties");
-    getSelector.innerHTML=getGoodsName;
-
-</script>
-
-
-
+<script type="module" src="./goods.js"></script>
+<script type="module" src="./goodstofront.js"></script>
 <script type="module" src="./typograph.js"></script>
+<script type="module" src="./typotofront.js"></script>
 
-<script>
-    //да, его следует подключить через файл, но тут нагляднее - меньше переключений между вклжаками
-
-    let flag=true;
-    function setTimer() {
-        let endData = new Date(2024, 0, 1);
-        let dataNow = new Date();
-        let countData = (endData - dataNow)/86400000;
-        //let days= countData;
-        //let hours= (countData)*24;
-        let minut= (countData)*24*60;
-
-
-        //let data = new Date();
-      let hours=document.querySelector(".hours");
-      let minutes=document.querySelector(".minutes");
-      let seconds=document.querySelector(".seconds");
-      let d1=document.querySelector(".d1");
-      let d2=document.querySelector(".d2");
-      //hours.innerHTML=data.getHours();
-      hours.innerHTML=Math.round((countData)*24);
-      minutes.innerHTML=Math.round((countData)*24*60);
-      seconds.innerHTML=(Math.round((countData)*24*60*60));
-
-      if (flag) {
-        d1.style.visibility="visible";
-        d2.style.visibility="visible";
-      }
-      else {
-        d1.style.visibility="hidden";
-        d2.style.visibility="hidden";
-      }
-      flag=!flag;
-    }
-
-    setInterval("setTimer()", 1000);
-    
-       
-    // import {goods} from './goods.js';
-    // let getGoodsName = "goods.name";
-    // getSelector = document.querySelector(".somegood-properties");
-    // getSelector.innerHTML=getGoodsName;
-    
-
-
-function insertTovar() {
-
-    //let tovar = document.querySelector(".somegood-properties");
-    //return goods.forEach((element, n) => console.log(element, n));
-    //return goods.forEach((element, n) => name11.innerHTML=name);
-}
-
-
-    
-</script>
-
+<script src="./main.js"></script>
 <script src="./bootstrap.bundle.min.js"></script>
 
 </body>
