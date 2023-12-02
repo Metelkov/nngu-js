@@ -3,30 +3,38 @@
 import {goods} from './goods.js';
 
 let key,value;
-goods.forEach(function(elem){
+let somegood=document.querySelectorAll(".somegood");
+somegood.forEach(function(elem,index){
 
-let goodPic = goods.imgSrc;
-let goodsName = goods.toString().name;
-let goodsKorpus = "Корпус:";
-let goodsRemen = "Ремешок:";
-let goodsRazmDispl = "Размер дисплея:";
-let goodsTipDispl = "Тип дисплея:";
-let goodsBluetooth = "Блютус:";
-let goodsOS = "Операционные системы:";
+let goodPic = goods[index].imgSrc;
+let goodsName = goods[index].name;
+let goodsKorpus = `Корпус: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ${goods[index].corpus}`;
+let goodsRemen = `<br> Ремешок: &nbsp&nbsp ${goods[index].remen}`;
+let goodsRazmDispl = `<br> Размер дисплея: &nbsp&nbsp ${goods[index].displaySize}`;
+let goodsTipDispl = `<br> Тип дисплея: &nbsp&nbsp ${goods[index].displayType}`;
+let goodsBluetooth = `<br> Блютус: &nbsp&nbsp&nbsp ${goods[index].bluetooth}`;
+let goodsOS = `<br> Операционные системы: &nbsp&nbsp&nbsp${goods[index].OS.os1}, &nbsp&nbsp${goods[index].OS.os2}`;
 
-let goodsPerechislPic = document.querySelector(".somegood-pic");
-goodsPerechislPic.innerHTML=`${goodPic}`;
+let goodsPerechislPic = elem.querySelector(".somegood-pic");
+goodsPerechislPic.innerHTML=`<img src=${goodPic}>`;
 
-let goodsPerechislName = document.querySelector(".somegood-name");
+let goodsPerechislName = elem.querySelector(".somegood-name");
 goodsPerechislName.innerHTML=`${goodsName}`;
 
-// let goodsPerechislSvoystv = document.querySelector(".somegood-properties");
-// goodsPerechislSvoystv.innerHTML=`${goodsKorpus} ${goodsRemen} ${goodsRazmDispl} ${goodsTipDispl} ${goodsBluetooth} ${goodsOS}`;
 
 
-let goodsPerechislSvoystv = document.querySelector(".somegood-properties");
+let goodsPerechisl = elem.querySelector(".somegood-properties");
+goodsPerechisl.innerHTML=`${goodsKorpus}`;
 
-  for ([key,value] of Object.entries(elem))
-    goodsPerechislSvoystv.innerHTML=`${key} ${value}`;
-        //alert(`${key}:${value}`);
+goodsPerechisl.innerHTML+=`${goodsRemen}`;
+
+goodsPerechisl.innerHTML+=`${goodsRazmDispl}`;
+
+goodsPerechisl.innerHTML+=`${goodsTipDispl}`;
+
+goodsPerechisl.innerHTML+=`${goodsBluetooth}`;
+
+goodsPerechisl.innerHTML+=`${goodsOS}`;
+
+
 })

@@ -1,11 +1,11 @@
 import {typograph} from './typotofront.js';
 
 
-// let key,value;
-// typograph.forEach(function(elem){
-//     for ([key,value] of Object.entries(elem))
-//         alert(`${key}:${value}`);
-// })
+let key,value;
+let sometypogr=document.querySelectorAll(".calc");
+sometypogr.forEach(function(elem,index){
+
+    
 
 
-alert(typograph.toString());
+});
